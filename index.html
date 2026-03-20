@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Price Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+<h1>📦 Box Price Calculator</h1>
+
+<form>
+
+<!-- Material -->
+<div class="section">
+<h3>Material Type</h3>
+<div class="radio-group">
+<label><input type="radio" name="material" value="duplex" checked> Duplex</label>
+<label><input type="radio" name="material" value="sbs"> SBS</label>
+</div>
+</div>
+
+<!-- Sheet Size -->
+<div class="section">
+<h3>Sheet Size in Inch</h3>
+<div class="grid-2">
+<input type="number" id="length" placeholder="Length">
+<input type="number" id="width" placeholder="Width">
+</div>
+</div>
+
+<!-- GSM & Total Sheet -->
+<div class="section grid-2">
+<div>
+<h3>Sheet GSM</h3>
+<input type="number" id="gsm">
+</div>
+<div>
+<h3>Total Sheet</h3>
+<input type="number" id="totalSheet">
+</div>
+</div>
+
+<!-- Rate & Item -->
+<div class="section grid-2">
+<div>
+<h3>Material Rate / Kg</h3>
+<input type="number" id="materialRate">
+</div>
+<div>
+<h3>Item Per Sheet</h3>
+<input type="number" id="itemPerSheet">
+</div>
+</div>
+
+<!-- Printing -->
+<div class="section">
+<h3>Printing</h3>
+<div class="radio-group">
+<label><input type="radio" name="printing" value="single"> Single Color</label>
+<label><input type="radio" name="printing" value="two"> Two Color</label>
+<label><input type="radio" name="printing" value="four"> Four Color</label>
+</div>
+</div>
+
+<!-- Lamination -->
+<div class="section">
+<h3>Lamination</h3>
+<div class="radio-group">
+<label><input type="radio" name="lamination" value="pvc"> PVC</label>
+<label><input type="radio" name="lamination" value="cosmo"> Cosmo</label>
+<label><input type="radio" name="lamination" value="nmat"> N. Mat</label>
+<label><input type="radio" name="lamination" value="gloss"> Gloss</label>
+<label><input type="radio" name="lamination" value="tmat"> T. Mat</label>
+</div>
+</div>
+
+<!-- Diecut -->
+<div class="section">
+<h3>Die Cutting</h3>
+<div class="radio-group">
+<label><input type="radio" name="diecut" value="yes"> Yes</label>
+<label><input type="radio" name="diecut" value="no"> No</label>
+</div>
+</div>
+
+<!-- Box & Stitch -->
+<div class="section grid-3">
+<div>
+<h3>Box Pasting Rate</h3>
+<input type="number" id="boxPastingRate">
+</div>
+<div>
+<h3>Sheet Pasting</h3>
+<input type="number">
+</div>
+<div>
+<h3>Stitching</h3>
+<input type="number">
+</div>
+</div>
+
+<!-- Foil -->
+<div class="section">
+<h3>Foil Printing</h3>
+<div class="grid-2">
+<input type="number" id="blockLength" placeholder="Block Length">
+<input type="number" id="blockWidth" placeholder="Block Width">
+</div>
+</div>
+
+<!-- UV -->
+<div class="section">
+<h3>Hybrid UV</h3>
+<div class="radio-group">
+<label><input type="radio" name="uv" value="huv"> HUV</label>
+<label><input type="radio" name="uv" value="full"> Full UV</label>
+<label><input type="radio" name="uv" value="spot"> Spot UV</label>
+</div>
+</div>
+
+<button type="button" onclick="calculateRate()">CALCULATE RATE</button>
+
+<h2 id="result"></h2>
+
+</form>
+</div>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
